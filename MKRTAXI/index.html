@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+<script type="text/javascript" charset="utf-8" src="scripts/main.js"></script> 
+<link rel="stylesheet" href="styles/main.css">    
+</head>
+<body>    
+    
+<div data-role="page" id="Startseite">
+  <div data-role="header" id="header" data-position="fixed" data-fullscreen="false">
+      TaxiApp MKR
+        <div data-role="navbar">
+    <ul>
+      <li><a href="#Startseite" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-home ui-btn-icon-left">Startseite</a></li>
+      <li><a href="#geraeteinfo" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-info ui-btn-icon-left">Geräteinfo</a></li>
+    </ul>
+  </div>
+  </div>    
+  <div data-role="main" class="ui-content">
+      <div id="auftrag"></div>
+      <div id="menue"></div>
+  </div>
+  <div data-role="footer" id="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="navbar">
+    <ul>
+      <li><a href="#schicht" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-clock ui-btn-icon-left">Schicht</a></li>
+      <li><a href="#geraeteinfo" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-info ui-btn-icon-left">Geräteinfo</a></li>
+      <li><a href="#" onclick="APPBeenden();" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-power ui-btn-icon-left">Beenden</a></li>
+    </ul>
+                &copy; 2015 - MKR
+  </div>
+  </div> 
+</div> 
+    
+<div data-role="page" id="geraeteinfo">
+  <div data-role="header">
+    <a href="#Startseite" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-home ui-btn-icon-left">&nbsp;</a><h1>GeräteInformation</h1>
+  </div>    
+  <div data-role="main" class="ui-content">
+    <div id="handyid">
+        HandyDaten werden geladen...
+      </div>
+      <p id="geolocation">Warte auf GPS Daten...</p>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2015 - MKR</h1>
+    <div id="status"></div>
+  </div>         
+</div>     
+
+</body>
+</html>
